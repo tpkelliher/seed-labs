@@ -18,7 +18,7 @@ source misc.sh
 source system.sh      
 
 # Add guest addition
-source guest-addition.sh
+#source guest-addition.sh
 
 # Clean up
 source cleanup.sh

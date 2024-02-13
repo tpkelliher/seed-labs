@@ -48,8 +48,8 @@ sudo cp $FileDir/etc_default_apport  /etc/default/apport
 # Configure Firefox
 # Need to manually find the value of tttt (the name is generated)
 # Look for the folder nnnnn.default-release
-FirefoxProfileDir=tttt
-cp $FileDir/firefox_profile_user.js  ~/.mozilla/firefox/$FirefoxProfileDir/user.js
+FirefoxProfileDir=$(find ~/.mozilla/firefox -type d -name "*.default-release" -print)
+cp $FileDir/firefox_profile_user.js  $FirefoxProfileDir/user.js
 
 
 
@@ -57,4 +57,3 @@ cp $FileDir/firefox_profile_user.js  ~/.mozilla/firefox/$FirefoxProfileDir/user.
 # Cleanup 
 
 unset FileDir FirefoxProfileDir
-
