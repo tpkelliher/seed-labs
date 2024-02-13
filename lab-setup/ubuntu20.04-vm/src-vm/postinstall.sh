@@ -11,7 +11,7 @@ Reminder: We need to do the following manually:
 ** OS: Fix Ubuntu internal error problem 
 
 The instructions are in the manual:
-https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/vm-manual-steps.md
+https://github.com/tpkelliher/seed-labs/blob/main/manuals/vm/vm-manual-steps.md
 
 EOF
 
