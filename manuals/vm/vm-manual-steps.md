@@ -33,7 +33,7 @@ To disable the notification, we need to do two steps
 ## Install HTTP header live extension 
 
 We need to manually install the "HTTP Header Live" extension, because 
-most of the web secrutiy labs need it. 
+most of the web secrutiy labs need it. See [HTTP Header Live](https://addons.mozilla.org/en-US/firefox/addon/http-header-live/) and install it.
 
 
 ## Disable DNS Over HTTPS
