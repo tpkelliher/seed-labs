@@ -40,7 +40,6 @@ most of the web secrutiy labs need it. See [HTTP Header Live](https://addons.moz
 
  In Version 80.0.1, Firefox uses DNS over HTTPS, which no longer uses the
 ```/etc/hosts``` file. We need to disable it.
-Click the menu button and select ```Preferences```.
-In the ```General``` panel, scroll down to ```Network Settings``` 
-and click the ```Settings``` button.
-In the dialog box that opens, scroll down to "Enable DNS over HTTPS", and disable it.
+In the ```Address Bar``` enter ```about:config``` .  Click ```Accept the Risk
+and Continue```. Search for ```network.trr.mode``` and change its value to
+```5```.
