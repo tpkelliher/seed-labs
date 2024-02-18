@@ -17,12 +17,12 @@ plain=""
 # Perform some validity checking on cipher and plain.
 
 if [[ "$cipher" == "" || "$plain" == "" ]]; then
-    echo "cipher is empty or plain is empty.  Fix."
+    echo "cipher is empty or plain is empty."
     exit 1
 fi
 
 if [[ ${#cipher} -ne ${#plain} ]]; then
-    echo "cipher and plain have different lengths.  Fix."
+    echo "cipher and plain have different lengths"
     exit 1
 fi
 
