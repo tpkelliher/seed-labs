@@ -2,7 +2,14 @@
 
 # This bash script will "decrypt" the file ciphertext.txt by using tr
 # to replace each letter in 'cipher' with the corresponding letter in
-# 'plain', piping the resulting decryption to the less pager for viewing.
+# 'plain'.  To view the output one page a time, pipe the script's output
+# to a pager:
+#
+#     ./decrypt | less
+#
+# To write the output to a file, redirect stdout:
+#
+#     ./decrypt > plaintext.txt
 
 # cipher MUST only contain lowercase letters.  For example:
 #     cipher="aie"
@@ -36,5 +43,5 @@ if [[ "$plain" =~ [[:lower:]] ]]; then
     exit 1
 fi
 
-tr $cipher $plain < ciphertext.txt | less
+tr $cipher $plain < ciphertext.txt
 exit 0
