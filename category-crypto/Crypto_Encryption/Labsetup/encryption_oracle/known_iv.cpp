@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 
     // print essential information
     //cout << "Bob's secret message is either \"Yes\" or \"No\", without quotations." << endl
-    cout << "Bob's secret message is \"Positive\", \"Negative\"," << endl
+    cout << "Bob's secret message is \"Positive\", \"Negative\","
          << "or \"Not Sure\", without quotations." << endl
          << "Bob's ciphertex: " << hexlify(ctext1) << endl
          << "The IV used    : " << hexlify(iv) << endl;
