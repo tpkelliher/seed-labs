@@ -20,11 +20,13 @@ int main(int argc, char const *argv[])
 
     // encrypt plaintext1 with iv1
     //Bytes ptext1 = {'Y', 'e', 's'};
-    Bytes ptext1 = {'N', 'o'};
+    Bytes ptext1 = {'N', 'e', 'g', 'a', 't', 'i', 'v', 'e'};
     Bytes ctext1 = aes_encrypt(key.data(), iv.data(), ptext1);
 
     // print essential information
     cout << "Bob's secret message is either \"Yes\" or \"No\", without quotations." << endl
+    cout << "Bob's secret message is \"Positive\", \"Negative\"," << endl
+         << "or \"Not Sure\", without quotations." << endl
          << "Bob's ciphertex: " << hexlify(ctext1) << endl
          << "The IV used    : " << hexlify(iv) << endl;
 
