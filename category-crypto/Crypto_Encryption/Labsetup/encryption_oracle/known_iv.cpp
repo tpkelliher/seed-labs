@@ -43,7 +43,8 @@ int main(int argc, char const *argv[])
             Bytes ptext2 = unhexlify(buf);
             Bytes ctext2 = aes_encrypt(key.data(), iv.data(), ptext2);
 
-            cout << "Your ciphertext: " << hexlify(ctext2) << endl;
+            cout << "Your ciphertext: " << hexlify(ctext2).substr(0, 32)
+                 << endl;
         }
         catch (const std::bad_alloc &err)
         {
