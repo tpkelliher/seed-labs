@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
     Bytes ctext1 = aes_encrypt(key.data(), iv.data(), ptext1);
 
     // print essential information
-    cout << "Bob's secret message is either \"Yes\" or \"No\", without quotations." << endl
+    //cout << "Bob's secret message is either \"Yes\" or \"No\", without quotations." << endl
     cout << "Bob's secret message is \"Positive\", \"Negative\"," << endl
          << "or \"Not Sure\", without quotations." << endl
          << "Bob's ciphertex: " << hexlify(ctext1) << endl
