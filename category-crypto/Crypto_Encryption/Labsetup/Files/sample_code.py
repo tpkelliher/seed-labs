@@ -27,8 +27,8 @@ print(r3.hex())
 # Convert bytearray to text and print
 print(D1.decode('utf-8'))
 
-# Apply PKCS5 padding to a message prior to encryption
-# for Task 6.3.
+# Apply PKCS5 padding to a message prior for Task 6.3
+# The plaintext given to the oracle should be a hex string
 msg = "A message"
 padding = 16 - (len(msg) % 16)
 MSG = bytearray(msg, 'utf-8')
