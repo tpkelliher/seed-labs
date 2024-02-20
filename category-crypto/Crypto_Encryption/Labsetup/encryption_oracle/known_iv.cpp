@@ -19,7 +19,8 @@ int main(int argc, char const *argv[])
     RAND_bytes(&iv[0], BLOCK_SIZE);
 
     // encrypt plaintext1 with iv1
-    Bytes ptext1 = {'Y', 'e', 's'};
+    //Bytes ptext1 = {'Y', 'e', 's'};
+    Bytes ptext1 = {'N', 'o'};
     Bytes ctext1 = aes_encrypt(key.data(), iv.data(), ptext1);
 
     // print essential information
