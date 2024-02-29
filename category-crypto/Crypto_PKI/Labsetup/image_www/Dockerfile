@@ -36,5 +36,5 @@ RUN  chmod 400 /certs/bank32.key \
      && chmod 644 $WWWDIR/index_red.html \
      && a2ensite bank32_apache_ssl   
 
-CMD  tail -f /dev/null
+CMD  service apache2 start && tail -f /dev/null
 
