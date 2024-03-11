@@ -1,11 +1,9 @@
 FLAGS    = -z execstack -fno-stack-protector
 FLAGS_32 = -static -m32
-TARGET   = server stack-L1 stack-L2 stack-L3 stack-L4
- 
-L1 = 100
-L2 = 180
-L3 = 200
-L4 = 80
+TARGET   = server stack-L1 stack-L2
+
+L1 = 142
+L2 = 242
 
 all: $(TARGET)
 
@@ -17,12 +15,6 @@ stack-L1: stack.c
 
 stack-L2: stack.c
 	gcc -DBUF_SIZE=$(L2) $(FLAGS) $(FLAGS_32) -o $@ stack.c
-
-stack-L3: stack.c
-	gcc -DBUF_SIZE=$(L3) -DSHOW_FP $(FLAGS) -o $@ stack.c
-
-stack-L4: stack.c
-	gcc -DBUF_SIZE=$(L4) -DSHOW_FP $(FLAGS) -o $@ stack.c
 
 clean:
 	rm -f badfile $(TARGET)

@@ -25,30 +25,6 @@ services:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.6
 
-    bof-server-L3:
-        build: 
-            context: ./bof-containers
-            args:
-                LEVEL: L3
-        image: seed-image-bof-server-3
-        container_name: server-3-10.9.0.7
-        tty: true
-        networks:
-            net-10.9.0.0:
-                ipv4_address: 10.9.0.7
-
-    bof-server-L4:
-        build: 
-            context: ./bof-containers
-            args:
-                LEVEL: L4
-        image: seed-image-bof-server-4
-        container_name: server-4-10.9.0.8
-        tty: true
-        networks:
-            net-10.9.0.0:
-                ipv4_address: 10.9.0.8
-
 
 networks:
     net-10.9.0.0:
