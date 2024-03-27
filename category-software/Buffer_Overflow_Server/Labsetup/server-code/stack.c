@@ -8,7 +8,8 @@
 /* Changing this size will change the layout of the stack.
  * Instructors can change this value each year, so students
  * won't be able to use the solutions from the past.
- * Suggested value: between 100 and 400  */
+ * The actual value is set in the Makefile.
+ * Suggested value: between 100 and 300  */
 #ifndef BUF_SIZE
 #define BUF_SIZE 200
 #endif
