@@ -11,10 +11,10 @@ server: server.c
 	gcc -o server server.c
 
 stack-L1: stack.c
-	gcc -DBUF_SIZE=$(L1) -DSHOW_FP $(FLAGS) $(FLAGS_32) -o $@ stack.c
+	@gcc -DBUF_SIZE=$(L1) -DSHOW_FP $(FLAGS) $(FLAGS_32) -o $@ stack.c
 
 stack-L2: stack.c
-	gcc -DBUF_SIZE=$(L2) $(FLAGS) $(FLAGS_32) -o $@ stack.c
+	@gcc -DBUF_SIZE=$(L2) $(FLAGS) $(FLAGS_32) -o $@ stack.c
 
 clean:
 	rm -f badfile $(TARGET)
