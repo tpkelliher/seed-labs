@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-    HostA:
+    HostFA:
         image: handsonsecurity/seed-ubuntu:large
         container_name: hostA-10.9.0.5
         tty: true
