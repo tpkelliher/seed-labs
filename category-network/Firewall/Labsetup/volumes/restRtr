@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This script contains the iptables commands to restore the router's filter
+# table to its original state in Task 1.A.
+
+iptables -F
+iptables -P OUTPUT ACCEPT
+iptables -P INPUT ACCEPT
