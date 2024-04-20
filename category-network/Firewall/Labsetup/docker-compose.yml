@@ -3,7 +3,7 @@ version: "3"
 services:
     HostA:
         image: handsonsecurity/seed-ubuntu:large
-        container_name: hostFA-10.9.0.5
+        container_name: hostA-10.9.0.5
         tty: true
         cap_add:
                 - ALL
