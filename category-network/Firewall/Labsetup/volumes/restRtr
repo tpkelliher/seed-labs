@@ -3,7 +3,9 @@
 # This script contains the iptables commands to restore the router's filter
 # table to its original state in Task 1.A.
 
+# Flush all rules
 iptables -F
+# Set a default policy of ACCEPT in the three main chains.
 iptables -P OUTPUT ACCEPT
 iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
