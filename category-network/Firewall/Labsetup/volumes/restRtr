@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # This script contains the iptables commands to restore the router's filter
-# table to its original state in Task 1.A.
+# table to its original state in Task 1.A and later tasks.
 
-# Flush all rules
+# Flush all rules in the filter table and the nat table's PREROUTING chain.
 iptables -F
 iptables -t nat -F PREROUTING
-# Set a default policy of ACCEPT in the three main chains.
+# Set a default policy of ACCEPT in the filter table's chains.
 iptables -P OUTPUT ACCEPT
 iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
