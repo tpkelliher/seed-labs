@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-# Send 'count' packets to the host with ip address 'ip'
-# using port 'port'.
+# Send 'count' UDP packets to the host with ip address 'ip' using port 'port'.
 
 import socket
 
