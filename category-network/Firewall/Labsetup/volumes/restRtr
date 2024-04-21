@@ -5,6 +5,7 @@
 
 # Flush all rules
 iptables -F
+iptables -t nat -F PREROUTING
 # Set a default policy of ACCEPT in the three main chains.
 iptables -P OUTPUT ACCEPT
 iptables -P INPUT ACCEPT
