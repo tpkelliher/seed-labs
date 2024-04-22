@@ -14,5 +14,5 @@ port = 8080
 for i in range(count):
     print('Sending packet ' + str(i))
     skt = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    skt.sendto(str.encode('packet ' + str(i) + '\n'), (ip, port))
+    skt.sendto(str.encode('packet ' + str(i)), (ip, port))
     skt.close()
