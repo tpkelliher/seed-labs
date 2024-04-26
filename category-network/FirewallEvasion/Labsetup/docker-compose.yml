@@ -142,7 +142,7 @@ services:
                       iptables -A FORWARD -i eth0 -p tcp --dport 22
                           -j ACCEPT && 
                       iptables -A FORWARD -i eth0 -p tcp -j DROP && 
-                      iptables -A FORWARD -i eth1 -d 93.184.216.0/24 -j DROP &&
+                      iptables -A FORWARD -i eth1 -d 93.184.215.0/24 -j DROP &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "
