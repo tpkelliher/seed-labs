@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Run on client (hostA) in separate window after running task3_1a.
+
+ip route replace 192.168.20.0/24 dev tun0
+ip route add 192.168.20.99 via 10.8.0.11

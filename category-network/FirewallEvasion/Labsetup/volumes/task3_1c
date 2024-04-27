@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Run on server (hostB) after running task3_1a and task3_1b.
+
+iptables -t nat -A POSTROUTING -j MASQUERADE -o eth0
