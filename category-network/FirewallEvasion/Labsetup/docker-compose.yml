@@ -137,12 +137,13 @@ services:
                       ip route add default via 10.8.0.1 &&
                       iptables -t nat -A POSTROUTING ! -d 10.8.0.0/24
                           -j MASQUERADE -o eth0 &&
+                      iptables -P FORWARD DROP &&
                       iptables -A FORWARD -i eth0 -p tcp -m conntrack
                           --ctstate ESTABLISHED,RELATED -j ACCEPT && 
-                      iptables -A FORWARD -i eth0 -p tcp --dport 22
-                          -j ACCEPT && 
-                      iptables -A FORWARD -i eth0 -p tcp -j DROP && 
+                      iptables -A FORWARD -i eth0 -p tcp -d 192.168.20.99
+                          --dport 22 -j ACCEPT && 
                       iptables -A FORWARD -i eth1 -d 93.184.215.0/24 -j DROP &&
+                      iptables -A FORWARD -i eth1 ACCEPT &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "
