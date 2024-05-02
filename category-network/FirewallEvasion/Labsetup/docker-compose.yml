@@ -77,7 +77,7 @@ services:
                       ip route del default  &&
                       ip route add default via 192.168.20.11  &&
                       apt update &&
-                      apt install lynx &&
+                      apt install -y lynx &&
                       /etc/init.d/openbsd-inetd start  &&
                       service ssh start  &&
                       tail -f /dev/null
