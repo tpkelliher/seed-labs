@@ -40,6 +40,8 @@ services:
         volumes:
                 - ./volumes:/volumes
         command: bash -c "
+                      apt update &&
+                      apt install arp-scan &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "
