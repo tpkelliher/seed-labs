@@ -6,12 +6,24 @@
 # Otherwise, multiple packets would be bundled into a single packet.
 
 import socket
+import sys
 
-count = 12
 ip = '10.9.0.11'
 port = 8080
 
-for i in range(count):
+if len(sys.argv) != 2:
+    print('Expecting one numeric argument')
+    exit(1)
+
+try:
+    count = int(sys.argv[1])
+except:
+    print('Expecting one numeric argument')
+    exit(1)
+
+print('Using count of ' + str(count))
+
+for i in range(1, count + 1):
     print('Sending packet ' + str(i))
     skt = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     skt.sendto(str.encode('packet ' + str(i)), (ip, port))

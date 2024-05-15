@@ -18,5 +18,5 @@ skt.bind((ip, port))
 
 while True:
     data = skt.recv(max_rcv)
-    print('Received ' + str(cnt) + ': ' + data.decode('utf-8'))
     cnt += 1
+    print('Received ' + str(cnt) + ': ' + data.decode('utf-8'))
